@@ -8,6 +8,7 @@ public class Main {
 		System.out.println();
 		long DoubleTime = DoubleHashMatching.matchStringTime(pattern, text);
 		compareTime(KMPTime, DoubleTime);
+		System.out.println();
 
 		text = "DAADJSAKAS";
 		pattern = "JSA";
@@ -15,6 +16,25 @@ public class Main {
 		System.out.println();
 		DoubleTime = DoubleHashMatching.matchStringTime(pattern, text);
 		compareTime(KMPTime, DoubleTime);
+		System.out.println();
+
+
+		text = "LALALSDJSKLAJKLDSAJKLJKLKLKAAAXOXJDASLKJDSKLASDALK";
+		pattern = "XOX";
+		KMPTime = KMP_String_Matching.matchStringTime(pattern, text);
+		System.out.println();
+		DoubleTime = DoubleHashMatching.matchStringTime(pattern, text);
+		compareTime(KMPTime, DoubleTime);
+		System.out.println();
+
+
+		text = "XIJASDLJLKNCKLNAKLDMQWEPOQWIRJQFLKANVASKGHAJDAKLSJELKQWJYUUYUYUYUYUYUYULDKASJLKDASJLKDJASLKASDJLK";
+		pattern = "YUYUYUYU";
+		KMPTime = KMP_String_Matching.matchStringTime(pattern, text);
+		System.out.println();
+		DoubleTime = DoubleHashMatching.matchStringTime(pattern, text);
+		compareTime(KMPTime, DoubleTime);
+		System.out.println();
 	}
 
 	static void compareTime(long KMPTime, long DoubleTime) {

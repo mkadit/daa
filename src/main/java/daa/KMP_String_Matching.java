@@ -75,7 +75,8 @@ public class KMP_String_Matching {
 	static long matchStringTime(String pattern, String text) {
 
 		System.out.println("KMP String Matching:");
-		System.out.println("Matching Text: " + text + " with Pattern: " + pattern);
+		System.out.println("Matching Text: " + text);
+        System.out.println( "with Pattern: " + pattern);
 		long startTime = System.nanoTime();
 		new KMP_String_Matching().KMPSearch(pattern, text);
 		long endTime = System.nanoTime();

@@ -70,7 +70,8 @@ public class DoubleHashMatching {
 		char pat[] = pattern.toCharArray();
 
 		System.out.println("DoubleHashMatching:");
-		System.out.println("Matching Text: " + text + " with Pattern: " + pattern);
+		System.out.println("Matching Text: " + text);
+        System.out.println( "with Pattern: " + pattern);
 		long startTime = System.nanoTime();
 		System.out.println("Found at " + new DoubleHashMatching().double_hash(pat, txt));
 		long endTime = System.nanoTime();
