@@ -16,15 +16,13 @@ public class Bruteforce {
 
     static long matchStringTime(String pattern, String text) {
 
-        System.out.println("BruteForce:");
-        System.out.println("Matching Text: " + text);
-        System.out.println("with Pattern: " + pattern);
         long startTime = System.nanoTime();
-        System.out.println("Found at " + new Bruteforce().brutefroce(pattern, text));
+		long index = new Bruteforce().brutefroce(pattern, text);
         long endTime = System.nanoTime();
         long totalTime = endTime - startTime;
 
         System.out.println("Bruteforce (ns): " + totalTime);
+		System.out.println("Found at " + index);
         return totalTime;
     }
 }

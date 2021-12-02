@@ -17,12 +17,19 @@ public class Main {
 		pattern = "XOX";
 		beginCompare(text, pattern);
 
-		text = "XIJASDLJLKNCKLNAKLDMQWEPOQWIRJQFLKANVASKGHAJDAKLSJELKQWJYUUYUYUYUYUYUYULDKASJLKDASJLKDJASLKASDJLK";
+		text = "XIJASDLJLKNCKLNAKLDMQWEPOQWIRJQFLKANVASKGHAJDAKLSJELKQWJYUUYYUYXUYUXYUYULDKASJLYUYUYUYUKDASJLKDJASLKASDJLK";
 		pattern = "YUYUYUYU";
+		beginCompare(text, pattern);
+
+
+		text = "DKLMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFMLAJLMKLELQRKJROIQUIJKADWJKLJE";
+		pattern = "ELKMLA";
 		beginCompare(text, pattern);
 	}
 
 	static void beginCompare(String text, String pattern) {
+        System.out.println("Matching Text: " + text);
+        System.out.println("with Pattern: " + pattern);
 		long KMPTime = KMP_String_Matching.matchStringTime(pattern, text);
 		System.out.println();
 		long DoubleTime = DoubleHashMatching.matchStringTime(pattern, text);

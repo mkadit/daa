@@ -62,15 +62,13 @@ public class RabinKarpMatching {
 
 	static long matchStringTime(String pattern, String text, int primeNumber) {
 
-		System.out.println("Rabin Karp Matching:");
-		System.out.println("Matching Text: " + text);
-		System.out.println("with Pattern: " + pattern);
 		long startTime = System.nanoTime();
-		System.out.println("Found at " + new RabinKarpMatching().rabinKarp(pattern, text, primeNumber));
+		long index =  new RabinKarpMatching().rabinKarp(pattern, text, primeNumber);
 		long endTime = System.nanoTime();
 		long totalTime = endTime - startTime;
 
 		System.out.println("Rabin Karp Matching (ns): " + totalTime);
+		System.out.println("Found at " + index);
 		return totalTime;
 	}
 }
