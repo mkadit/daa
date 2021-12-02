@@ -25,9 +25,9 @@ public class KMP_String_Matching {
 			}
 			if (j == M) {
 				// I have no idea at this point mate
-				System.out.println("Found at " + (i - j));
-				// return i - j;
-				j = lps[j - 1];
+				// System.out.println("Found at " + (i - j));
+				return i - j;
+				// j = lps[j - 1];
 			}
 
 			// mismatch after j matches
@@ -82,7 +82,7 @@ public class KMP_String_Matching {
 		long totalTime = endTime - startTime;
 
 		System.out.println("KMP Matching time (ns): " + totalTime);
-		// System.out.println("Found at " + index);
+		System.out.println("Found at " + index);
 		return totalTime;
 	}
 }
