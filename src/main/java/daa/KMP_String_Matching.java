@@ -82,7 +82,7 @@ public class KMP_String_Matching {
 		long endTime = System.nanoTime();
 		long totalTime = endTime - startTime;
 
-		System.out.println("Double Hash Matching time (ns): " + totalTime);
+		System.out.println("KMP Matching time (ns): " + totalTime);
 		return totalTime;
 	}
 }
