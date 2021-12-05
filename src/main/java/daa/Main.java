@@ -27,8 +27,12 @@ public class Main {
 
         text = "DKLMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFMLAJLMKLELQRKJROIQUIJKADWJKLJE";
         pattern = "ELKMLA";
-
         beginCompare(text, pattern);
+
+        text = "DKLMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFMLAJLMKLELQRKJROIQUIMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFMLAJLMKLELQRKJROIJKADWJKLJE";
+        pattern = "LKMLAKFMLAJLMKLELQRKJROIQUIMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFML";
+        beginCompare(text, pattern);
+
         Path path = Paths.get("bees.txt").toAbsolutePath();
         System.out.println(path.toString());
         try {
@@ -56,8 +60,10 @@ public class Main {
         long RabinKarpTime = RabinKarpMatching.matchStringTime(pattern, text, 101);
         System.out.println();
         long BoyerMooreTime = BoyerMooreHorspool.matchStringTime(pattern, text);
+        System.out.println();
+        long RaitaTime = Raita.matchStringTime(pattern, text);
 
-        long[] times = { KMPTime, DoubleTime, BruteforceTime };
+        long[] times = { KMPTime, DoubleTime, BruteforceTime, RabinKarpTime, BoyerMooreTime, RaitaTime };
         Arrays.sort(times);
 
         HashMap<Long, String> algorighms = new HashMap<>();
@@ -66,6 +72,7 @@ public class Main {
         algorighms.put(BruteforceTime, "Bruteforce");
         algorighms.put(RabinKarpTime, "RabinKarpMatching");
         algorighms.put(BoyerMooreTime, "BoyerMooreHorspool");
+        algorighms.put(RaitaTime, "Raita");
 
         String fastestAlgorithm = algorighms.get(times[0]);
         System.out.println(
