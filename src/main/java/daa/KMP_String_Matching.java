@@ -82,7 +82,7 @@ public class KMP_String_Matching {
 		long totalTime = endTime - startTime;
 
 		System.out.println("KMP Matching time (ns): " + totalTime);
-		System.out.println("Found at " + index);
+		// System.out.println("Found at " + index);
 		return totalTime;
 	}
 }

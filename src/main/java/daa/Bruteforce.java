@@ -7,7 +7,7 @@ public class Bruteforce {
             String cand = str.substring(pos, pos + pat.length()); // Try to match this...
 
             if (pat.equals(cand)) {
-                System.out.println("Found pattern at posistion: " + pos); // Found
+                // System.out.println("Found pattern at posistion: " + pos); // Found
                 return pos;
             }
         }
@@ -22,7 +22,7 @@ public class Bruteforce {
         long totalTime = endTime - startTime;
 
         System.out.println("Bruteforce (ns): " + totalTime);
-		System.out.println("Found at " + index);
+		// System.out.println("Found at " + index);
         return totalTime;
     }
 }

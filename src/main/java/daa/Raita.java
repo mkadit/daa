@@ -55,7 +55,7 @@ public class Raita {
         long totalTime = endTime - startTime;
 
         System.out.println("Raita time (ns): " + totalTime);
-        System.out.println("Found at " + index);
+        // System.out.println("Found at " + index);
         return totalTime;
     }
 

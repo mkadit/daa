@@ -75,7 +75,7 @@ public class DoubleHashMatching {
 		long totalTime = endTime - startTime;
 
 		System.out.println("Double Hash Matching time (ns): " + totalTime);
-		System.out.println("Found at " + index);
+		// System.out.println("Found at " + index);
 		return totalTime;
 	}
 

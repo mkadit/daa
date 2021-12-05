@@ -68,7 +68,7 @@ public class RabinKarpMatching {
 		long totalTime = endTime - startTime;
 
 		System.out.println("Rabin Karp Matching (ns): " + totalTime);
-		System.out.println("Found at " + index);
+		// System.out.println("Found at " + index);
 		return totalTime;
 	}
 }

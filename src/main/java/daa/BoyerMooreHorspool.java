@@ -66,7 +66,7 @@ public class BoyerMooreHorspool {
              * the above loop
              */
             if (j < 0) {
-                System.out.println("Patterns occur at shift = " + s);
+                // System.out.println("Patterns occur at shift = " + s);
                 return s;
 
                 /*
@@ -109,7 +109,7 @@ public class BoyerMooreHorspool {
         long totalTime = endTime - startTime;
 
         System.out.println("BoyerMooreHorspool (ns): " + totalTime);
-        System.out.println("Found at " + index);
+        // System.out.println("Found at " + index);
         return totalTime;
     }
 }
