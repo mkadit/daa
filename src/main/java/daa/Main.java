@@ -11,8 +11,8 @@ import java.util.HashMap;
 public class Main {
 	static HashMap<String, HashMap<Integer, ArrayList<Long>>> timeAlgo = new HashMap<>();
 	static int index = 0;
-	static int numTestCase = 7;
-	static int numTestDone = 10;
+	static int numTestCase = 5;
+	static int numTestDone = 1000;
 
 	public static void main(String[] args) {
 		// initialization
@@ -58,41 +58,30 @@ public class Main {
 	}
 
 	static void begin() {
-		String text = "Sofita";
-		String pattern = "ofi";
-		inputCase(text, pattern);
-
-		text = "DAADJSAKAS";
-		pattern = "JSA";
-		inputCase(text, pattern);
-
-		text = "LALALSDJSKLAJKLDSAJKLJKLKLKAAAXOXJDASLKJDSKLASDALK";
-		pattern = "XOX";
-		inputCase(text, pattern);
-
-		text = "XIJASDLJLKNCKLNAKLDMQWEPOQWIRJQFLKANVASKGHAJDAKLSJELKQWJYUUYYUYXUYUXYUYULDKASJLYUYUYUYUKDASJLKDJASLKASDJLK";
-		pattern = "YUYUYUYU";
-		inputCase(text, pattern);
-
-		text = "DKLMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFMLAJLMKLELQRKJROIQUIJKADWJKLJE";
-		pattern = "ELKMLA";
-		inputCase(text, pattern);
-
-		text = "DKLMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFMLAJLMKLELQRKJROIQUIMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFMLAJLMKLELQRKJROIJKADWJKLJE";
-		pattern = "LKMLAKFMLAJLMKLELQRKJROIQUIMEALDMAJKCPEAOKRLEMGKHOELKASNMELKMLAKFML";
-		inputCase(text, pattern);
-
-		text = "38120380^%^!#!HJKnkjdshfkahdkcy39479Shechchenkodsdak P1 $ %^ &7ST asdkj128937 97sdf6&^76381687&^*#!*&(*(FASDKJQWHEUYC))";
-		pattern = "Shechchenkodsdak P1 $ %^ &7ST";
-		inputCase(text, pattern);
 
 		Path path = Paths.get("bees.txt").toAbsolutePath();
 		// System.out.println(path.toString());
 		try {
 			String content = Files.readString(path, StandardCharsets.US_ASCII);
 			// System.out.println(content);
-			text = content;
-			pattern = "jazz";
+			// Short testcase found early
+			String text = content;
+			String pattern = "jazz";
+			inputCase(text, pattern);
+			// Short testcase found late
+			pattern = "y'all";
+			inputCase(text, pattern);
+
+			// Sentence
+			pattern = "I was already a blood-sucking parasite.";
+			inputCase(text, pattern);
+
+			//Many Patterns
+			pattern = "Shechchenkodsdak P1 $ %^ &7ST";
+			inputCase(text, pattern);
+
+			//Not found
+			pattern = "XOXOOXOXOXOX";
 			inputCase(text, pattern);
 		} catch (Exception e) {
 			System.out.println(e);
