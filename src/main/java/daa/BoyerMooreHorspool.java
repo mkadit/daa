@@ -1,5 +1,7 @@
 package daa;
 
+// taken from https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/
+
 /**
  * This function implements Boyer Moore Horspool algorithm.
  * In this algorithm, the comparison is done from right to left, starting with

@@ -1,5 +1,7 @@
 package daa;
 // JAVA program for implementation of KMP pattern
+//
+// This code has been contributed by Amit Khandelwal.
 
 // searching algorithm
 
@@ -86,4 +88,3 @@ public class KMP_String_Matching {
 		return totalTime;
 	}
 }
-// This code has been contributed by Amit Khandelwal.

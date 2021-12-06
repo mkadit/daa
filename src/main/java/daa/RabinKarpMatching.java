@@ -1,5 +1,7 @@
 package daa;
 
+// taken from https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/
+
 public class RabinKarpMatching {
 	// d is the number of characters in the input alphabet
 	final static int d = 256;
